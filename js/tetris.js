@@ -118,7 +118,8 @@ class Tetris {
                      type);
         }
     }
-drawCell(context, cellX, cellY, cellSize, type) {
+
+    drawCell(context, cellX, cellY, cellSize, type) {
         let block = this.blocks[type];
         let adjustedX = cellX + 0.5;
         let adjustedY = cellY + 0.5;
@@ -243,7 +244,7 @@ drawCell(context, cellX, cellY, cellSize, type) {
                 for (let x = 0; x < this.stageWidth; x++) {
                     this.virtualStage[x][0] = null;
                 }
-            let linesElem = document.getElementById("lines");
+                let linesElem = document.getElementById("lines");
                 this.deletedLines++;
                 linesElem.innerText = "" + this.deletedLines;
             } else {
@@ -251,7 +252,8 @@ drawCell(context, cellX, cellY, cellSize, type) {
             }
         }
     }
- drawStage() {
+
+    drawStage() {
         this.clear(this.stageCanvas);
 
         let context = this.stageCanvas.getContext("2d");
